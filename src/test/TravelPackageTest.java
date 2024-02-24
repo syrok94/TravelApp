@@ -11,10 +11,14 @@ import packages.TravelPackage;
 
 class TravelPackageTest {
 
+    TravelPackage travelPackage = new TravelPackage("Test Travel Package", 10);
+    Destination destination = new Destination("Test Destination");
+    Passenger passenger = new Passenger("ram", 4, "STANDARD", 50000);
+
+
     @Test
     void testAddDestination() {
-        TravelPackage travelPackage = new TravelPackage("Test Travel Package", 10);
-        Destination destination = new Destination("Test Destination");
+        
         travelPackage.addDestination(destination);
         assertTrue(travelPackage.getDestinations().contains(destination));
     }
@@ -22,14 +26,19 @@ class TravelPackageTest {
 
     @Test
     void testAddPassengers() {
-        TravelPackage travelPackage = new TravelPackage("Test Travel Package", 10);
-        Passenger passenger = new Passenger("ram", 4, "STANDARD", 50000);
         travelPackage.addPassenger(passenger);
         assertTrue(travelPackage.getPassengers().contains(passenger));
     }
 
     @Test
+    void testGetDestination(){  
+        travelPackage.addDestination(destination);
+        assertEquals(destination, travelPackage.getDestinations().get(0));
+    }   
+
+    @Test
     void testGetPassenger(){
-        
+        travelPackage.addPassenger(passenger);
+        assertEquals(passenger, travelPackage.getPassengers().get(0));
     }
 }
