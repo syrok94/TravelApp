@@ -27,4 +27,9 @@ class TravelPackageTest {
         travelPackage.addPassenger(passenger);
         assertTrue(travelPackage.getPassengers().contains(passenger));
     }
+
+    @Test
+    void testGetPassenger(){
+        
+    }
 }
