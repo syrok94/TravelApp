@@ -23,6 +23,14 @@ public class TravelPackage {
         passengers.add(passenger);
     }
 
+    public List<Destination> getDestinations(){
+        return itinerary;
+    } 
+
+    public List<Passenger> getPassengers(){
+        return passengers;
+    }
+
     public void printItinerary() {
         System.out.println("Travel Package: " + name);
         for (Destination destination : itinerary) {
@@ -77,4 +85,5 @@ public class TravelPackage {
 
        System.out.println("Total space available : " + sum);
     }
+
 }
