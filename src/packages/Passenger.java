@@ -47,6 +47,10 @@ public class Passenger {
         return passengerNumber;
     }
 
+    public String getPassengerType(){
+        return passengerType;
+    }
+
     public double getBalance() {
         return balance;
     }
